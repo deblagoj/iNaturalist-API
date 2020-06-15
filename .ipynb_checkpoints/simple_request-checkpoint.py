@@ -39,18 +39,15 @@ if __name__ == '__main__':
     #args = parser.parse_args()
     #string = predict_result(args.file)
     
-    mypath='../datasets/'
+    mypath='../dataset/'
     from os import listdir
     from os.path import isfile, join
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    print(onlyfiles)
+    #print(onlyfiles)
     
     output_all=''
     for x in onlyfiles:
-        print('this file is processed')
-        print(x)
         string = predict_result(mypath+x)
-        #string=''
         output_all=output_all+string+ '\n'
     
     print(output_all)
